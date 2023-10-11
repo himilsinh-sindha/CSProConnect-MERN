@@ -25,14 +25,7 @@ router.post("/addDetails", async (req, res) => {
   let {
     enrollmentNo,
     firstName,
-    middleName,
-    lastName,
-    email,
-    phoneNumber,
-    semester,
-    branch,
-    gender,
-    profile,
+    middleName
   } = req.body;
 
   try {
