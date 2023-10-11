@@ -25,7 +25,14 @@ router.post("/addDetails", async (req, res) => {
   let {
     enrollmentNo,
     firstName,
-    middleName
+    middleName,
+    lastName,
+    email,
+    phoneNumber,
+    semester,
+    branch,
+    gender,
+    // profile,
   } = req.body;
 
   try {
@@ -45,7 +52,14 @@ router.post("/addDetails", async (req, res) => {
     await studentDetails.create({
       enrollmentNo,
       firstName,
-      middleName
+      middleName,
+      lastName,
+      email,
+      phoneNumber,
+      semester,
+      branch,
+      gender,
+      // profile,
     });
 
     const data = {
