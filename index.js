@@ -31,6 +31,6 @@ app.use("/api/branch", require("./routes/branch"));
 //   res.sendFile(path.resolve(__dirname,"frontend","build","index.html"));
 // });
 
-// app.listen(port, () => {
-//   console.log(`Server Listening On http://localhost:${port}`);
-// });
+app.listen(port, () => {
+  console.log(`Server Listening On http://localhost:${port}`);
+});
