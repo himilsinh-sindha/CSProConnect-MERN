@@ -22,7 +22,7 @@ router.post("/getDetails", async (req, res) => {
 });
 
 router.post("/addDetails", async (req, res) => {
-  const {
+  let {
     enrollmentNo,
     firstName,
     middleName,
@@ -37,7 +37,7 @@ router.post("/addDetails", async (req, res) => {
 
   try {
     // Check if a student with the same enrollment number already exists.
-    const existingStudent = await studentDetails.findOne({
+    let existingStudent = await studentDetails.findOne({
       enrollmentNo: enrollmentNo,
     });
 
