@@ -52,14 +52,7 @@ router.post("/addDetails", async (req, res) => {
     await studentDetails.create({
       enrollmentNo,
       firstName,
-      middleName,
-      lastName,
-      email,
-      phoneNumber,
-      semester,
-      branch,
-      gender,
-      profile,
+      middleName
     });
 
     const data = {
