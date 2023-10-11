@@ -49,7 +49,7 @@ router.post("/addDetails", async (req, res) => {
     }
 
     // Create a new student record in the database.
-    const newStudent = await studentDetails.create({
+    await studentDetails.create({
       enrollmentNo,
       firstName,
       middleName,
@@ -65,7 +65,6 @@ router.post("/addDetails", async (req, res) => {
     const data = {
       success: true,
       message: "Student Details Added!",
-      user: newStudent,
     };
 
     res.json(data);
