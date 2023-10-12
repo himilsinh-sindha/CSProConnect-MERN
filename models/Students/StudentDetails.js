@@ -25,8 +25,8 @@ const studentDetails = new mongoose.Schema({
     type: Number,
     required: true,
   },
-  semester: {
-    type: Number,
+  class: {
+    type: String,
     required: true,
   },
   gender: {
