@@ -22,51 +22,23 @@ router.post("/getDetails", async (req, res) => {
 });
 
 router.post("/addDetails", async (req, res) => {
-  let {
-    enrollmentNo,
-    firstName,
-    middleName,
-    lastName,
-    email,
-    phoneNumber,
-    semester,
-    branch,
-    gender,
-    // profile,
-  } = req.body;
-
   try {
-    // Check if a student with the same enrollment number already exists.
-    let existingStudent = await studentDetails.findOne({
-      enrollmentNo: enrollmentNo,
+    let user = await studentDetails.findOne({
+      enrollmentNo: req.body.enrollmentNo,
     });
-
-    if (existingStudent) {
+    if (user) {
       return res.status(400).json({
         success: false,
         message: "Student With This Enrollment Already Exists",
       });
     }
 
-    // Create a new student record in the database.
-    await studentDetails.create({
-      enrollmentNo,
-      firstName,
-      middleName,
-      lastName,
-      email,
-      phoneNumber,
-      semester,
-      branch,
-      gender,
-      // profile,
-    });
-
+    let newUser = await studentDetails.create(req.body);
     const data = {
       success: true,
       message: "Student Details Added!",
+      newUser
     };
-
     res.json(data);
   } catch (error) {
     res.status(500).json({ success: false, message: "Internal Server Error" });
