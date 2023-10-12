@@ -33,11 +33,11 @@ router.post("/addDetails", async (req, res) => {
       });
     }
 
-    let newUser = await studentDetails.create(req.body);
+    let newStudent = await studentDetails.create(req.body);
     const data = {
       success: true,
       message: "Student Details Added!",
-      newUser
+      newStudent
     };
     res.json(data);
   } catch (error) {

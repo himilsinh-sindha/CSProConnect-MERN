@@ -30,11 +30,11 @@ router.post("/addDetails", async (req, res) => {
         message: "Faculty With This EmployeeId Already Exists",
       });
     }
-    user = await facultyDetails.create(req.body);
+    let newFaculty = await facultyDetails.create(req.body);
     const data = {
       success: true,
       message: "Faculty Details Added!",
-      user,
+      newFaculty
     };
     res.json(data);
   } catch (error) {

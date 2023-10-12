@@ -30,11 +30,11 @@ router.post("/addDetails", async (req, res) => {
         message: "Admin With This EmployeeId Already Exists",
       });
     }
-    user = await adminDetails.create(req.body);
+    let newAdmin = await adminDetails.create(req.body);
     const data = {
       success: true,
       message: "Admin Details Added!",
-      user,
+      newAdmin
     };
     res.json(data);
   } catch (error) {
