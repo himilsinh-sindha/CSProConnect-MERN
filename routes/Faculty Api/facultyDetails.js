@@ -23,7 +23,9 @@ router.post("/getDetails", async (req, res) => {
 
 router.post("/addDetails", async (req, res) => {
   try {
-    let user = await facultyDetails.findOne(req.body);
+    let user = await facultyDetails.findOne({
+      employeeId: req.body.employeeId,
+    });
     if (user) {
       return res.status(400).json({
         success: false,

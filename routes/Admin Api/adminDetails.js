@@ -23,7 +23,9 @@ router.post("/getDetails", async (req, res) => {
 
 router.post("/addDetails", async (req, res) => {
   try {
-    let user = await adminDetails.findOne(req.body);
+    let user = await adminDetails.findOne({
+      employeeId: req.body.employeeId,
+    });
     if (user) {
       return res.status(400).json({
         success: false,
@@ -37,7 +39,8 @@ router.post("/addDetails", async (req, res) => {
       newAdmin
     };
     res.json(data);
-  } catch (error) {
+  } 
+  catch (error) {
     res.status(500).json({ success: false, message: "Internal Server Error" });
   }
 });
