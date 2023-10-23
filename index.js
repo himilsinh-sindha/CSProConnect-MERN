@@ -8,12 +8,12 @@ var cors = require("cors");
 app.use(cors());
 app.use(express.json()); //to convert request data to json
 
-app.use((req, res, next) => {
-  res.header('Cache-Control', 'no-store, no-cache, must-revalidate, max-age=0');
-  res.header('Pragma', 'no-cache');
-  res.header('Expires', '-1');
-  next();
-});
+// app.use((req, res, next) => {
+//   res.header('Cache-Control', 'no-store, no-cache, must-revalidate, max-age=0');
+//   res.header('Pragma', 'no-cache');
+//   res.header('Expires', '-1');
+//   next();
+// });
 
 // Credential Apis
 app.use("/api/student/auth", require("./routes/Student Api/studentCredential"));
