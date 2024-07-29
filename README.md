@@ -21,8 +21,8 @@ The **Faculty Management System** is designed to streamline departmental tasks, 
 - View and download timetables, marks, notices, and materials.
 
 ## Tech Stack
-- **Frontend:** React.js
-- **Backend:** Spring Boot
+- **Frontend:** React.js,Redux Toolkit
+- **Backend:** Node.js,Express.js
 - **Database:** MongoDB
 - **Storage:** Firebase
 
@@ -33,7 +33,7 @@ The **Faculty Management System** is designed to streamline departmental tasks, 
 - **Improved Productivity:** Reduce administrative overhead and enhance resource allocation.
 
 ## Live Demo
-Try it live on [csproconnect.tech](https://csproconnect.tech) using the default credentials:
+Try it live on [csproconnect.me](https://csproconnect.me) using the default credentials:
 - **Username:** 1234
 - **Password:** root
 
@@ -44,16 +44,16 @@ Try it live on [csproconnect.tech](https://csproconnect.tech) using the default 
 
 1. **Clone the repository:**
     ```bash
-    git clone https://github.com/yourusername/faculty-management-system.git
+    git clone https://github.com/himilsinh-sindha/CSProConnect-MERN.git
     ```
 2. **Navigate to the project directory:**
     ```bash
-    cd faculty-management-system
+    cd CSProConnect-MERN
     ```
 3. **Frontend Setup:**
     - Navigate to the frontend directory:
       ```bash
-      cd frontend
+      cd Frontend
       ```
     - Install dependencies:
       ```bash
@@ -67,15 +67,15 @@ Try it live on [csproconnect.tech](https://csproconnect.tech) using the default 
 4. **Backend Setup:**
     - Navigate to the backend directory:
       ```bash
-      cd backend
+      cd Backend
       ```
-    - Install dependencies and build the project:
+    - Install dependencies:
       ```bash
-      mvn clean install
+      npm install
       ```
-    - Run the Spring Boot application:
+    - Start the Node.js server:
       ```bash
-      mvn spring-boot:run
+      node index.js
       ```
 
 ## Usage
@@ -104,5 +104,12 @@ The Faculty Management System significantly enhances the efficiency and effectiv
 ---
 
 **Developed by Team Titans**
+
+## Contributors
+
+- [Ketul Prajapati - @ketul-prajapati](https://github.com/Ketul-Prajapati)
+- [Himilsinh Sindha - @himilsinh-sindha](https://github.com/himilsinh-sindha)
+- [Preet Mistry - @preet-mistry](https://github.com/Preet2003)
+- [Manav Parmar - @Parmar-Manav](https://github.com/Parmar-Manav)
 
 *Feel free to reach out for any questions or collaboration opportunities!*
